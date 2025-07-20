@@ -1,0 +1,690 @@
+/* =========================
+   VARIABLE WARNA & FONTS
+   ========================= */
+:root {
+    --primary: #20c997;
+    --primary-dark: #159c7e;
+    --accent: #ffc107;
+    --light-bg: #f6fffa;
+    --dark-bg: #212529;
+}
+
+/* =========================
+   RESET & BASE
+   ========================= */
+body {
+    background: var(--light-bg);
+    color: #222;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+section {
+    scroll-margin-top: 110px;
+}
+
+/* =========================
+   NAVBAR
+   ========================= */
+.navbar,
+.navbar.scrolled {
+    background: rgba(255,255,255,0.95) !important;
+    box-shadow: 0 2px 16px rgba(32,201,151,0.08);
+    border-bottom: 2px solid var(--primary);
+    backdrop-filter: blur(8px);
+    transition: all 0.25s cubic-bezier(.4,2,.6,1);
+}
+.navbar-brand,
+.header h1 span,
+.text-primary {
+    color: var(--primary) !important;
+}
+.navbar-brand {
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    font-weight: 800;
+    text-shadow: 0 2px 8px #b2f2e5;
+}
+.navbar-nav .nav-link {
+    position: relative;
+    transition: color 0.2s;
+}
+.navbar-nav .nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: width .3s;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 100%;
+}
+
+/* Responsive Navbar Collapse */
+.navbar-collapse {
+    max-height: 90vh;
+    overflow-y: auto;
+    background: rgba(255,255,255,0.97);
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+    z-index: 9999;
+}
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        padding-bottom: 1rem;
+    }
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100vw;
+    }
+}
+
+/* =========================
+   HEADER
+   ========================= */
+.header {
+    background: linear-gradient(90deg, #e0fff4 60%, #fff 100%);
+    border-radius: 1.5rem;
+    box-shadow: 0 6px 32px rgba(32,201,151,0.10);
+    padding: 3rem 2rem;
+    transition: all 0.25s cubic-bezier(.4,2,.6,1);
+}
+.header h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+.header p {
+    font-size: 1.3rem;
+    color: #159c7e;
+}
+.header .btn {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.2s, background 0.2s;
+    border-radius: 2rem;
+    font-weight: 600;
+}
+.header .btn:hover {
+    transform: scale(1.05);
+    background: var(--primary-dark);
+}
+
+/* =========================
+   SERVICES
+   ========================= */
+#services {
+    background: var(--light-bg);
+    transition: background 0.3s;
+}
+#services img {
+    height: 150px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+#services img:hover {
+    transform: scale(1.08) rotate(-2deg);
+    box-shadow: 0 8px 32px rgba(13,110,253,0.15);
+}
+#services .card {
+    border-radius: 1.2rem;
+    box-shadow: 0 4px 24px rgba(32,201,151,0.10);
+    transition: background 0.3s, transform 0.2s;
+}
+#services .card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 32px rgba(32,201,151,0.18);
+}
+#services .card-title {
+    color: var(--light);
+    font-weight: 600;
+}
+#services .card-text {
+    color: var(--light);
+    font-size: 1.1rem;
+}
+#services .card-footer {
+    background: transparent;
+    border: none;
+    text-align: center;
+}
+#services .card-footer .btn {
+    background: var(--primary);
+    color: #fff;
+    border-radius: 2rem;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s;
+}
+#services .card-footer .btn:hover {
+    background: var(--primary-dark);
+    transform: scale(1.05);
+}
+
+/* Card kedua pada Services: judul putih */
+#services .row .col-md:nth-child(2) .card-title {
+    color: #fff !important;
+}
+
+/* =========================
+   PRODUCTS
+   ========================= */
+
+#products {
+    background: var(--light-bg);
+    transition: background 0.3s;
+}
+
+#products .row {
+    margin-bottom: 2rem;
+}
+
+#products .col-md-4 {
+    margin-bottom: 2rem;
+}
+
+.product-card {
+    border-radius: 1.2rem;
+    box-shadow: 0 4px 24px rgba(32,201,151,0.10);
+    transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+    background: #fff;
+}
+
+.product-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 32px rgba(32,201,151,0.18);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 1.2rem 1.2rem 0 0;
+    transition: transform 0.3s;
+}
+
+.product-card img:hover {
+    transform: scale(1.05);
+}
+
+.product-card .card-body {
+    padding: 1.5rem;
+}
+
+.product-card .card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.product-card .card-text {
+    font-size: 1.1rem;
+    color: #6c757d;
+}
+
+.product-card .card-footer {
+    background: transparent;
+    border: none;
+    text-align: center;
+}
+
+.product-card .card-footer .btn {
+    background: var(--primary);
+    color: #fff;
+    border-radius: 2rem;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.product-card .card-footer .btn:hover {
+    background: var(--primary-dark);
+    transform: scale(1.05);
+}
+
+/* =========================
+   PRODUCT BADGE
+   ========================= */
+
+.product-card .badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1rem;
+    padding: 0.5em 1em;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px #b2f2e5;
+    background-color: var(--accent) !important;
+    color: #222 !important;
+    z-index: 10;
+}
+
+/* =========================
+   PRODUCT CARD ANIMATION
+   ========================= */
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+.product-card.animate__animated {
+    animation: fadeInUp 0.8s;
+}
+
+/* =========================
+   PRODUCT CARD STYLES
+   ========================= */
+.product-card {
+    border: none;
+    border-radius: 1.2rem;
+    box-shadow: 0 4px 24px rgba(32,201,151,0.10);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+    background: #fff;
+}
+.product-card .badge {
+    top: 10px;
+    left: 10px;
+    font-size: 1rem;
+    padding: 0.5em 1em;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px #b2f2e5;
+    background-color: var(--accent) !important;
+    color: #222 !important;
+}
+.product-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 32px rgba(32,201,151,0.18);
+}
+.product-card .card-title {
+    color: var(--primary);
+}
+/* Card kedua pada Services: judul putih */
+#services .row .col-md:nth-child(2) .card-title {
+    color: #fff !important;
+}
+.card {
+    border-radius: 1rem;
+    box-shadow: 0 2px 16px rgba(32,201,151,0.07);
+    transition: all 0.25s cubic-bezier(.4,2,.6,1), background 0.3s;
+    background: #fff;
+}
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+
+/* =========================
+   PRODUCT CARD
+   ========================= */
+#products {
+    background: var(--light-bg);
+    transition: background 0.3s;
+}
+
+/* Card produk sama rata dan tombol di bawah */
+.product-card {
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card-body {
+    flex-grow: 1;
+}
+.card-footer {
+    margin-top: auto;
+    background: transparent;
+    border: none;
+}
+
+/* Animasi produk masuk */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+.product-card.animate__animated {
+    animation: fadeInUp 0.8s;
+}
+
+.product-card {
+    border: none;
+    border-radius: 1.2rem;
+    box-shadow: 0 4px 24px rgba(32,201,151,0.10);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+    background: #fff;
+}
+.product-card .badge {
+    top: 10px;
+    left: 10px;
+    font-size: 1rem;
+    padding: 0.5em 1em;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px #b2f2e5;
+    background-color: var(--accent) !important;
+    color: #222 !important;
+}
+.product-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 32px rgba(32,201,151,0.18);
+}
+.card-title {
+    color: var(--primary);
+}
+/* Card kedua pada Services: judul putih */
+#services .row .col-md:nth-child(2) .card-title {
+    color: #fff !important;
+}
+.card {
+    border-radius: 1rem;
+    box-shadow: 0 2px 16px rgba(32,201,151,0.07);
+    transition: all 0.25s cubic-bezier(.4,2,.6,1), background 0.3s;
+    background: #fff;
+}
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+
+/* =========================
+   PROMO SECTION
+   ========================= */
+#promo.bg-gradient,
+.bg-gradient {
+    background: linear-gradient(90deg, var(--primary) 60%, #63e6be 100%) !important;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 24px rgba(32,201,151,0.10);
+    margin-bottom: 2rem;
+    transition: background 0.3s;
+}
+#promo .input-group .form-control {
+    border-radius: 2rem 0 0 2rem;
+    border: none;
+}
+#promo .input-group .btn {
+    border-radius: 0 2rem 2rem 0;
+    font-weight: 700;
+}
+
+/* =========================
+   ABOUT & CONTACT
+   ========================= */
+#about {
+    background: var(--light-bg);
+    transition: background 0.3s;
+}
+#about img,
+#contact img {
+    border-radius: 1rem;
+    box-shadow: 0 4px 24px rgba(32,201,151,0.10);
+}
+#contact {
+    background: var(--light-bg);
+    transition: background 0.3s;
+}
+#contact .card {
+    border-radius: 1.2rem;
+    box-shadow: 0 4px 24px rgba(32,201,151,0.10);
+    background: #fff;
+    transition: background 0.3s;
+}
+#contact .list-group-item {
+    background: transparent;
+    border: none;
+    font-size: 1.15rem;
+    color: #159c7e;
+}
+#contact .bi {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-right: 12px;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+footer {
+    border-radius: 1.5rem 1.5rem 0 0;
+    margin-top: 2rem;
+    background: var(--dark-bg) !important;
+    color: #fff;
+    box-shadow: 0 -2px 16px rgba(32,201,151,0.10);
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+    transition: background 0.3s;
+}
+footer a, .bi {
+    color: var(--accent) !important;
+    transition: color 0.2s;
+    font-weight: 600;
+}
+footer a:hover {
+    color: var(--primary) !important;
+    text-decoration: underline;
+}
+
+/* =========================
+   BUTTONS
+   ========================= */
+.btn-primary, .bg-primary {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: #fff !important;
+}
+.btn-primary:hover, .bg-primary:hover {
+    background-color: var(--primary-dark) !important;
+    border-color: var(--primary-dark) !important;
+}
+.btn-secondary {
+    background-color: var(--accent) !important;
+    border-color: var(--accent) !important;
+    color: #222 !important;
+}
+.btn-secondary:hover {
+    background-color: #e0a800 !important;
+    border-color: #e0a800 !important;
+    color: #fff !important;
+}
+.btn-primary:active, .btn-secondary:active {
+    transform: scale(0.97);
+}
+
+/* =========================
+   BACK TO TOP BUTTON & PROMO POPUP
+   ========================= */
+.back-to-top {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    display: none;
+    z-index: 9999;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    background: var(--primary);
+    color: #fff;
+    transition: background 0.3s;
+}
+.promo-popup {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 1.5rem;
+    padding: 1rem 1.5rem;
+    display: none;
+    z-index: 1050;
+    background: var(--primary);
+    color: #fff;
+    transition: background 0.3s;
+}
+
+/* =========================
+   TOAST
+   ========================= */
+.toast-container .toast {
+    background: var(--accent) !important;
+    color: #222 !important;
+    border-radius: 1rem;
+    box-shadow: 0 4px 24px rgba(32,201,151,0.10);
+    transition: background 0.3s;
+}
+.toast-container .btn-close {
+    filter: invert(1);
+}
+
+/* =========================
+   SECTION DIVIDER
+   ========================= */
+hr.section-divider,
+section hr {
+    width: 80px;
+    border-top: 3px solid var(--primary);
+    margin: 0 auto 2rem auto;
+}
+
+/* =========================
+   SCROLLBAR
+   ========================= */
+::-webkit-scrollbar-thumb {
+    background: #b2f2e5;
+    border-radius: 8px;
+}
+::-webkit-scrollbar {
+    background: #e6fcf5;
+    border-radius: 8px;
+    width: 10px;
+}
+
+/* =========================
+   LOADER
+   ========================= */
+.loader-bg {
+    position: fixed;
+    z-index: 20000;
+    background: rgba(255,255,255,0.95);
+    width: 100vw;
+    height: 100vh;
+    top: 0; left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.4s, background 0.3s;
+}
+.loader-bg.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* =========================
+   DARK MODE
+   ========================= */
+body.dark-mode {
+    background: #181a1b !important;
+    color: #f8fafc !important;
+}
+body.dark-mode .navbar,
+body.dark-mode .navbar.scrolled {
+    background: #23272b !important;
+    border-bottom: 2px solid var(--accent);
+}
+body.dark-mode .navbar-collapse {
+    background: #23272b !important;
+}
+body.dark-mode .navbar-brand,
+body.dark-mode .header h1 span,
+body.dark-mode .text-primary {
+    color: var(--accent) !important;
+}
+body.dark-mode .nav-link {
+    color: #ffc107 !important;
+}
+body.dark-mode .nav-link.active::after,
+body.dark-mode .nav-link:hover::after {
+    background: var(--accent);
+}
+body.dark-mode .bi {
+    color: var(--accent) !important;
+}
+body.dark-mode .header {
+    background: linear-gradient(90deg, #23272b 60%, #181a1b 100%) !important;
+    color: #ffc107 !important;
+}
+body.dark-mode .header h1,
+body.dark-mode .header p {
+    color: #ffc107 !important;
+}
+body.dark-mode #services,
+body.dark-mode #products,
+body.dark-mode #about,
+body.dark-mode #contact {
+    background: #181a1b !important;
+    color: #f8fafc !important;
+}
+body.dark-mode .card,
+body.dark-mode .product-card,
+body.dark-mode #contact .card {
+    background: #23272b !important;
+    color: #ffc107 !important;
+    box-shadow: 0 2px 16px rgba(32,201,151,0.15);
+}
+body.dark-mode .card-title,
+body.dark-mode #about h2,
+body.dark-mode #about p,
+body.dark-mode #about .list-group-item,
+body.dark-mode #contact h2,
+body.dark-mode #contact .list-group-item {
+    color: #ffc107 !important;
+}
+body.dark-mode #promo.bg-gradient,
+body.dark-mode .bg-gradient {
+    background: linear-gradient(90deg, #23272b 60%, #181a1b 100%) !important;
+    color: #ffc107 !important;
+}
+body.dark-mode #promo .input-group .form-control,
+body.dark-mode #promo .input-group .btn {
+    background: #23272b !important;
+    color: #ffc107 !important;
+    border: none;
+}
+body.dark-mode .badge.bg-success {
+    background-color: #ffc107 !important;
+    color: #23272b !important;
+}
+body.dark-mode footer {
+    background: #23272b !important;
+    color: #ffc107 !important;
+    box-shadow: 0 2px 16px rgba(32,201,151,0.15);
+}
+body.dark-mode footer a,
+body.dark-mode footer .bi {
+    color: #ffc107 !important;
+}
+body.dark-mode .btn-primary,
+body.dark-mode .btn-secondary,
+body.dark-mode .back-to-top,
+body.dark-mode .promo-popup,
+body.dark-mode #services .card-footer .btn {
+    background: #ffc107 !important;
+    color: #23272b !important;
+    border-color: #ffc107 !important;
+}
+body.dark-mode .btn-primary:hover,
+body.dark-mode .btn-secondary:hover,
+body.dark-mode .back-to-top:hover,
+body.dark-mode #services .card-footer .btn:hover {
+    background: #e0a800 !important;
+    color: #fff !important;
+}
+body.dark-mode .toast-container .toast {
+    background: #23272b !important;
+    color: #ffc107 !important;
+}
+body.dark-mode .toast-container .btn-close {
+    filter: invert(0);
+}
+body.dark-mode .loader-bg {
+    background: #23272b !important;
+}
+body.dark-mode ::-webkit-scrollbar-thumb {
+    background: #444 !important;
+}
+body.dark-mode ::-webkit-scrollbar {
+    background: #23272b !important;
+}
