@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MariShop</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navmenu" data-bs-offset="120" tabindex="0">
+
+    <!-- Loader -->
+    <div id="loader" class="loader-bg">
+        <div class="spinner-border text-primary" role="status"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 shadow-sm">
+        <div class="container">
+            <a href="#" class="navbar-brand fw-bold fs-2 text-primary">MariShop</a>
+            <button id="toggleDark" class="btn btn-outline-secondary ms-3" title="Toggle dark mode">
+                <i class="bi bi-moon"></i>
+            </button>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navmenu"
+                aria-controls="navmenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navmenu" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto fw-bold">
+                    <li class="nav-item">
+                        <a href="#services" class="nav-link">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#products" class="nav-link">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#promo" class="nav-link">Promo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Header -->
+        <section class="header bg-info-subtle text-center text-sm-start pt-5 pb-5 pb-sm-0 mt-5">
+            <div class="container">
+                <div class="d-flex align-items-center flex-column flex-sm-row">
+                    <div>
+                        <h1><span class="text-primary">Mari</span> belanja online, <span class="text-primary">Mari</span> belanja instan</h1>
+                        <p class="lead active">
+                            Hei para kaum mager, Yuk belanja online, Belanja tanpa perlu jalan & keluar rumah.
+                        </p>
+                        <button class="btn btn-primary btn-lg">
+                            Yuk belanja!
+                        </button>
+                    </div>
+                    <img 
+                        class="img-fluid w-50 d-none d-sm-block ms-sm-5" 
+                        src="images/header.svg" 
+                        alt="header"
+                    >
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="p-5" id="services">
+            <div class="container">
+                <h2 class="text-center mb-4">Layanan Kami</h2>
+                <hr class="section-divider">
+                <div class="row text-center g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="images/online-shopping.svg" class="card-img-top p-4" alt="Belanja Online">
+                            <div class="card-body">
+                                <h5 class="card-title">Belanja Online</h5>
+                                <p class="card-text">Beli kebutuhan harian, elektronik, fashion, dan lainnya dengan mudah dari rumah.</p>
+                                <a href="https://shopee.co.id/" class="btn btn-primary">Belanja Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm border-0 bg-info text-white">
+                            <img src="images/shopping_app.svg" class="card-img-top p-4" alt="Kirim Hadiah">
+                            <div class="card-body">
+                                <h5 class="card-title">Kirim Hadiah</h5>
+                                <p class="card-text">Kirim hadiah spesial ke orang terkasih dengan layanan pengiriman cepat dan aman.</p>
+                                <a href="https://shopee.co.id/" class="btn btn-light">Kirim Hadiah</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="images/web-shopping.svg" class="card-img-top p-4" alt="Belanja Makanan">
+                            <div class="card-body">
+                                <h5 class="card-title">Belanja Makanan</h5>
+                                <p class="card-text">Pesan makanan favoritmu dari restoran terbaik tanpa harus keluar rumah.</p>
+                                <a href="https://shopee.co.id/" class="btn btn-primary">Pesan Makanan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us -->
+        <section class="p-5 bg-light" id="about">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-md-6">
+                        <img src="images/about-us.svg" alt="About Us" class="img-fluid rounded shadow">
+                    </div>
+                    <div class="col-md-6">
+                        <h2 class="mb-3 text-primary">Tentang MariShop</h2>
+                        <hr class="section-divider">
+                        <p class="lead">
+                            MariShop adalah solusi belanja online yang mudah, cepat, dan terpercaya. Kami menyediakan berbagai kebutuhan harian, makanan, hingga promo menarik untuk kamu para kaum mager!
+                        </p>
+                        <ul class="list-group list-group-flush mb-3">
+                            <li class="list-group-item"><i class="bi bi-truck"></i> Pengiriman cepat & aman</li>
+                            <li class="list-group-item"><i class="bi bi-shield-check"></i> Pembayaran aman</li>
+                            <li class="list-group-item"><i class="bi bi-gift"></i> Banyak promo setiap hari</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <!-- Products -->
+        <section class="p-5" id="products">
+            <div class="container">
+                <h2 class="text-center mb-2">Produk Terbaru</h2>
+                <hr class="section-divider">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow product-card border-0">
+                            <span class="badge bg-success position-absolute m-2">Baru</span>
+                            <img src="images/product1.svg" class="card-img-top p-3" alt="Product 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Produk 1</h5>
+                                <p class="card-text">Kualitas terbaik dengan harga terjangkau.</p>
+                                <a href="#" class="btn btn-primary w-100">Beli Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow product-card border-0">
+                            <span class="badge bg-success position-absolute m-2">Baru</span>
+                            <img src="images/product2.svg" class="card-img-top p-3" alt="Product 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Produk 2</h5>
+                                <p class="card-text">Dapatkan penawaran menarik hari ini!</p>
+                                <a href="#" class="btn btn-primary w-100">Beli Sekarang</a>   
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow product-card border-0">
+                            <span class="badge bg-success position-absolute m-2">Baru</span>
+                            <img src="images/product3.svg" class="card-img-top p-3" alt="Product 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Produk 3</h5>
+                                <p class="card-text">Belanja mudah dan cepat di MariShop.</p>
+                                <a href="#" class="btn btn-primary w-100">Beli Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promo -->
+        <section id="promo" class="bg-gradient text-light p-5">
+            <div class="container">
+                <div class="d-md-flex justify-content-between align-items-center">
+                    <h3 class="mb-3 mb-md-0">
+                        <i class="bi bi-stars me-2"></i>
+                        Dapatkan promo menarik setiap minggu!
+                    </h3>
+                    <form class="input-group" style="max-width:400px;">
+                        <input type="email" class="form-control" placeholder="Masukkan email anda" required>
+                        <button class="btn btn-dark btn-lg" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us -->
+        <section class="p-5" id="contact">
+            <div class="container">
+                <h2 class="text-center mb-2">Contact Us</h2>
+                <hr class="section-divider">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6">
+                        <div class="card shadow border-0">
+                            <ul class="list-group list-group-flush lead">
+                                <li class="list-group-item">
+                                    <i class="bi bi-geo-alt fs-3 text-primary"></i>
+                                    <span class="fw-bold">Location:</span>
+                                    <br>Jalan Kebaikan, 14
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="bi bi-telephone fs-3 text-primary"></i>
+                                    <span class="fw-bold">Mobile Phone:</span>
+                                    <br>(+62) 838-1234-1234
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="bi bi-instagram fs-3 text-primary"></i>
+                                    <span class="fw-bold">Instagram:</span>
+                                    <br>@marishop
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="bi bi-envelope fs-3 text-primary"></i>
+                                    <span class="fw-bold">E-Mail:</span>
+                                    <br>services@marishop.com
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img class="img-fluid d-none d-sm-block" src="images/contact-us.svg" alt="contact-us" style="max-height:300px;">
+                    </div>
+                </div>                  
+            </div>
+        </section>
+    </main>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="btn btn-primary shadow back-to-top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Promo Popup -->
+    <div id="promoPopup" class="promo-popup bg-primary text-white rounded shadow">
+        <strong>Promo Spesial!</strong> Dapatkan diskon 10% untuk pembelian pertama.
+        <button class="btn btn-sm btn-light ms-2" onclick="this.parentElement.style.display='none'">Tutup</button>
+    </div>
+
+    <!-- Toast Notifikasi Promo -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 11000;">
+        <div id="promoToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    Terima kasih! Email promo berhasil dikirim.
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="p-5 bg-dark text-white text-center position-relative">
+        <div class="container">
+            <p class="lead mb-0">&copy; 2025 MariShop.com</p>
+        </div>
+    </footer>
+
+    <!-- Script Section -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script>
+        // Loader
+        window.addEventListener('load', function() {
+            document.getElementById('loader').classList.add('hide');
+            setTimeout(() => document.getElementById('loader').remove(), 600);
+        });
+
+        // Navbar blur on scroll
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a.nav-link').forEach(link => {
+            link.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href.startsWith('#')) {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Back to top button
+        window.addEventListener('scroll', function () {
+            document.getElementById('backToTop').style.display = window.scrollY > 200 ? 'block' : 'none';
+        });
+        document.getElementById('backToTop').onclick = function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+
+        // Promo popup
+        setTimeout(function () {
+            document.getElementById('promoPopup').style.display = 'block';
+        }, 2500);
+
+        // Dark mode toggle
+        document.getElementById('toggleDark').onclick = function () {
+            document.body.classList.toggle('dark-mode');
+        };
+
+        // Toast promo on submit
+        document.querySelector('#promo form').onsubmit = function(e) {
+            e.preventDefault();
+            const toast = new bootstrap.Toast(document.getElementById('promoToast'));
+            toast.show();
+            this.reset();
+        };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/Draggable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/Observer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollSmoother.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
